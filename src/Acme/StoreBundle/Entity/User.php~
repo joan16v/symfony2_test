@@ -1,0 +1,35 @@
+<?php
+
+// src/Acme/StoreBundle/Entity/User.php
+namespace Acme\StoreBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="user")
+ */
+class User
+{
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    protected $name;
+
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    protected $login;
+
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    protected $email;
+}
